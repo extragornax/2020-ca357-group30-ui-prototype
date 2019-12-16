@@ -1,0 +1,32 @@
+body {
+  padding: 4px;
+  width: 100%;
+  display: flex;
+}
+
+.timetable {
+  border: solid 1px #555;
+  border-radius: 25px;
+  margin: 5px;
+  display: inline-flex;
+  flex-direction: column;
+  width: 25%;
+}
+.dailyArticle {
+  padding: 10px;
+  margin: 0px;
+}
+
+.day {
+  font-style: italic;
+  text-decoration: underline;
+  margin: 0px;
+}
+
+.dayContent {
+}
+
+.dayDetails {
+  margin: 0;
+  margin-left: 9%;
+}
