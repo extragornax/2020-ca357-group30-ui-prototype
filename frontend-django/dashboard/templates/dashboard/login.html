@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% block head_link %}
+    <link href="https://getbootstrap.com/docs/4.4/examples/sign-in/signin.css" rel="stylesheet">
+{% endblock head_link %}
+
+{% block body_content %}
+<div class="form-signin">
+ <form class="form-signin">
+  <img class="mb-4" src="https://www.dcu.ie/sites/default/files/marketing/images/dcu_logo_stacked_green.png" alt="" width="72" height="72">
+  <p>This is the login page for DCU Dashboard, please sign-in using your DCU Student ID</p>
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <label for="inputDCU ID" class="sr-only">DCU ID</label>
+  <input type="DCU ID" id="inputDCU ID" class="form-control" placeholder="DCU ID" required autofocus>
+  <hr>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+  <button class="btn btn-lg btn-primary btn-block">Register</button>
+  </div>
+{% endblock body_content %}

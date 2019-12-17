@@ -13,6 +13,10 @@ def cleanModulesSearch(s):
     return s
 
 
+def login(request):
+    return render(request, 'dashboard/login.html')
+
+
 def index(request):
     context = {}
     modules_error = ""
