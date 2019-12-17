@@ -14,31 +14,38 @@ def index(request):
         context['announcements'] = request.GET['announcements']
     webservice_url = 'http://vps.cheap.appboxes.co:10126/'
 
-    days = {
-        0: "Monday",
-        1: "Tuesday",
-        2: "Wednesday",
-        3: "Thursday",
-        4: "Friday",
-        5: "Saturday",
-        6: "Sunday"
-	}
+    modulesPerDay = [{"day": "Monday", "data": []}, {"day": "Tuesday", "data": []}, {"day": "Wednesday", "data": []},
+                     {"day": "Thursday", "data": []}, {"day": "Friday", "data": []}, {"day": "Saturday", "data": []}, {"day": "Sunday", "data": []}]
 
-    modulesPerDay = { 0:[], 1:[], 2:[], 3:[], 4:[], 5:[], 6:[] }
-
-    if "modules" in context:
+    if "modules" in context and len(context['modules']) > 0:
         webservice_url += "?modules=" + context['modules']
     modulesInfos = requests.get(webservice_url).json()
 
     for module in modulesInfos:
-        moduleName = module  + " - " + modulesInfos[module]['name']
+        moduleName = module + " - " + modulesInfos[module]['name']
         for i in modulesInfos[module]['events']:
-            modulesPerDay[int(i)].append({
-                "begins": modulesInfos[module]['events'][i]['begins'],
+            timeSplitStart = modulesInfos[module]['events'][i]['begins'].split(
+                ':')
+            timeSplitEnd = modulesInfos[module]['events'][i]['ends'].split(
+                ':')
+            classData = {
+                "start_hour": timeSplitStart[0],
+                "start_min": timeSplitStart[1],
+                "end_hour": timeSplitEnd[0],
+                "end_min": timeSplitEnd[1],
                 "duration": modulesInfos[module]['events'][i]['duration'],
                 "module": moduleName
-            })
-            # print(modulesInfos[module]['events'][i]['begins'], "for", modulesInfos[module]['events'][i]['duration'])
-        # print(moduleName)
+            }
+            modulesPerDay[int(i)]['data'].append(classData)
+    counter = 0
+    toPop = []
+    for i in modulesPerDay:
+        if len(i['data']) == 0:
+            toPop.append(counter)
+        counter += 1
+    while len(toPop) > 0:
+        modulesPerDay.pop(toPop.pop())
+
+    context['modulesPerDay'] = modulesPerDay
 
     return render(request, 'dashboard/index.html', context)
