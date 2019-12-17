@@ -145,13 +145,14 @@
 					action="{%url 'dashboard:index'%}" method="get">
 					<div class="input-group">
 						<input name="modules" type="text" class="form-control bg-light border-0 small"
-							placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" value="{{modules}}">
+							placeholder="Search for modules with their code like separated by comma" aria-label="Search for modules with their code like separated by comma without spaces exemple: CA377,CA358" aria-describedby="basic-addon2" value="{{modules}}">
 						<div class="input-group-append">
 							<button class="btn btn-primary" type="button">
 								<i class="fas fa-search fa-sm"></i>
 							</button>
 						</div>
-					</div>
+                    </div>
+                    <span >{{modules_error}}</span>
 				</form>
 				<!-- Topbar Navbar -->
 				<ul class="navbar-nav ml-auto">
