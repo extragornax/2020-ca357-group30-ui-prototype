@@ -352,7 +352,7 @@
 							<!-- <div class="card-header py-3">
 								<h6 class="m-0 font-weight-bold text-primary">Announcements</h6>
 							</div> -->
-							<div class="card-body">Today you have 4 lectures and you will start at 9am.</div>
+							<div class="card-body">Today you have {{lectureCount.count}} lectures today {% if lectureCount.count > 0 %}and you will start at {{lectureCount.first.hour}}:{{lectureCount.first.min}}.{% endif %}</div>
 						</div>
 						<div class="card shadow mb-4">
 							<div class="card-header py-3">

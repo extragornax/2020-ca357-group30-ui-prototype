@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render
 import requests
+from datetime import date
 # Index route
 
 
@@ -39,13 +40,29 @@ def index(request):
             modulesPerDay[int(i)]['data'].append(classData)
     counter = 0
     toPop = []
+    lectCounter = 0
+    today = date.today().weekday()
     for i in modulesPerDay:
         if len(i['data']) == 0:
             toPop.append(counter)
+        if counter == today:
+            lectCounter = len(i['data'])
         counter += 1
+    earliestTime = {"hour": None, "min": None}
+    for i in modulesPerDay[today]['data']:
+        if earliestTime['hour'] == None:
+            earliestTime['hour'] = i['start_hour']
+            earliestTime['min'] = i['start_min']
+        elif earliestTime['hour'] == i['start_hour']:
+            if earliestTime['min'] > i['start_min']:
+                earliestTime['min'] = i['start_min']
+        elif earliestTime['hour'] == i['start_hour']:
+            earliestTime['hour'] = i['start_hour']
+            earliestTime['min'] = i['start_min']
+
     while len(toPop) > 0:
         modulesPerDay.pop(toPop.pop())
 
     context['modulesPerDay'] = modulesPerDay
-
+    context['lectureCount'] = {"count": lectCounter, "first": earliestTime}
     return render(request, 'dashboard/index.html', context)
