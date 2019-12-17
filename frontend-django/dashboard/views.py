@@ -10,12 +10,12 @@ from datetime import date
 def cleanModulesSearch(s):
     s = s.replace(" ", "")
     s = s.upper()
-
     return s
 
 
 def index(request):
     context = {}
+    modules_error = ""
     if "modules" in request.GET:
         context['modules'] = cleanModulesSearch(request.GET['modules'])
     if "announcements" in request.GET:
@@ -26,24 +26,29 @@ def index(request):
                      {"day": "Thursday", "data": []}, {"day": "Friday", "data": []}, {"day": "Saturday", "data": []}, {"day": "Sunday", "data": []}]
 
     if "modules" in context and len(context['modules']) > 0:
-        webservice_url += "?modules=" + context['modules']
+        webservice_url += "?modules=" + cleanModulesSearch(context['modules'])
     modulesInfos = requests.get(webservice_url).json()
     for module in modulesInfos:
-        moduleName = module + " - " + modulesInfos[module]['name']
-        for i in modulesInfos[module]['events']:
-            timeSplitStart = modulesInfos[module]['events'][i]['begins'].split(
-                ':')
-            timeSplitEnd = modulesInfos[module]['events'][i]['ends'].split(
-                ':')
-            classData = {
-                "start_hour": timeSplitStart[0],
-                "start_min": timeSplitStart[1],
-                "end_hour": timeSplitEnd[0],
-                "end_min": timeSplitEnd[1],
-                "duration": modulesInfos[module]['events'][i]['duration'],
-                "module": moduleName
-            }
-            modulesPerDay[int(i)]['data'].append(classData)
+        if modulesInfos[module] != "Not Found":
+            moduleName = module + " - " + modulesInfos[module]['name']
+            for i in modulesInfos[module]['events']:
+                timeSplitStart = modulesInfos[module]['events'][i]['begins'].split(
+                    ':')
+                timeSplitEnd = modulesInfos[module]['events'][i]['ends'].split(
+                    ':')
+                classData = {
+                    "start_hour": timeSplitStart[0],
+                    "start_min": timeSplitStart[1],
+                    "end_hour": timeSplitEnd[0],
+                    "end_min": timeSplitEnd[1],
+                    "duration": modulesInfos[module]['events'][i]['duration'],
+                    "module": moduleName
+                }
+                modulesPerDay[int(i)]['data'].append(classData)
+        else:
+            if len(modules_error) == 0:
+                modules_error += "Some modules were not found, please note only CA modules are available please recheck : "
+            modules_error += module + " "
     counter = 0
     toPop = []
     lectCounter = 0
@@ -71,4 +76,6 @@ def index(request):
 
     context['modulesPerDay'] = modulesPerDay
     context['lectureCount'] = {"count": lectCounter, "first": earliestTime}
+
+    context['modules_error'] = modules_error
     return render(request, 'dashboard/index.html', context)
