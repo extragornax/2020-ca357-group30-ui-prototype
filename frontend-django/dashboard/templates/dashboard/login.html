@@ -8,13 +8,14 @@
 <div class="form-signin">
  <form class="form-signin">
   <img class="mb-4" src="https://www.dcu.ie/sites/default/files/marketing/images/dcu_logo_stacked_green.png" alt="" width="72" height="72">
+  <h1>{{msg}}</h1>
   <p>This is the login page for DCU Dashboard, please sign-in using your DCU Student ID</p>
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputDCU ID" class="sr-only">DCU ID</label>
-  <input type="DCU ID" id="inputDCU ID" class="form-control" placeholder="DCU ID" required autofocus formaction="/dashboard" name="student_id">
+  <input type="DCU ID" id="inputDCU ID" class="form-control" placeholder="DCU ID" required autofocus formaction="/dashboard" name="dcu_id">
   <hr>
   <button class="btn btn-lg btn-primary btn-block" type="submit" formaction="/dashboard">Sign in</button>
 </form>
-  <button class="btn btn-lg btn-primary btn-block">Register</button>
+  <button class="btn btn-lg btn-primary btn-block" onClick="window.location='/register';" value="click here to register" >Register</button>
   </div>
 {% endblock body_content %}

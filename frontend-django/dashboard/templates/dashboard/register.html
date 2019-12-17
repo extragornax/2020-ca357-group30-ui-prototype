@@ -1,20 +1,40 @@
 {% extends './base.html' %}
 
 {% block head_link %}
-    <link href="https://getbootstrap.com/docs/4.4/examples/sign-in/signin.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/4.4/examples/sign-in/signin.css" rel="stylesheet">
 {% endblock head_link %}
 
 {% block body_content %}
 <div class="form-signin">
- <form class="form-signin">
-  <img class="mb-4" src="https://www.dcu.ie/sites/default/files/marketing/images/dcu_logo_stacked_green.png" alt="" width="72" height="72">
-  <p>This is the login page for DCU Dashboard, please sign-in using your DCU Student ID</p>
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-  <label for="inputDCU ID" class="sr-only">DCU ID</label>
-  <input type="DCU ID" id="inputDCU ID" class="form-control" placeholder="DCU ID" required autofocus formaction="/dashboard" name="student_id">
-  <hr>
-  <button class="btn btn-lg btn-primary btn-block" type="submit" formaction="/dashboard">Sign in</button>
-</form>
-  <button class="btn btn-lg btn-primary btn-block">Register</button>
-  </div>
+    <form class="form-signin" method="POST">
+        <img class="mb-4" src="https://www.dcu.ie/sites/default/files/marketing/images/dcu_logo_stacked_green.png"
+            alt="" width="72" height="72">
+        <p>Provide your DCU Student ID, Name and your modules list to register.</p>
+        <p>Please note, there's a format for your modules list, it should be a list of module's code separated by a
+            comma without any spaces</p>
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputYour First Name" class="sr-only">Your First Name</label>
+        <input type="Your First Name" id="inputYour First Name" class="form-control" placeholder="Your First Name"
+            required autofocus formaction="/register" name="first_name">
+
+        <label for="inputYour Last Name" class="sr-only">Your Last Name</label>
+        <input type="Your Last Name" id="inputYour Last Name" class="form-control" placeholder="Your Last Name" required
+            autofocus formaction="/register" name="last_name">
+
+
+        <label for="inputDCU ID" class="sr-only">DCU ID</label>
+        <input type="DCU ID" id="inputDCU ID" class="form-control" placeholder="DCU ID" required formaction="/register"
+            name="dcu_id">
+
+        <label for="inputYour modules" class="sr-only">Your modules</label>
+        <input type="Your modules" id="inputYour modules" class="form-control" placeholder="Your modules" required
+            formaction="/register" name="modules">
+
+
+        <hr>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" formaction="/register">Register</button>
+    </form>
+    <button class="btn btn-lg btn-primary btn-block" onClick="window.location='/';"
+        value="click here to go back to login page">Go back to Login</button>
+</div>
 {% endblock body_content %}

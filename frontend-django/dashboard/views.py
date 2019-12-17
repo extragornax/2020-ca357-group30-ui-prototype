@@ -3,6 +3,9 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render
 import requests
+from dashboard.models import User
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 from datetime import date
 # Index route
 
@@ -17,10 +20,34 @@ def login(request):
     return render(request, 'dashboard/login.html')
 
 
+@csrf_exempt
+def register(request):
+    context = {}
+    if request.method == 'POST':
+        User.objects.filter(modules=request.POST['modules']).delete()
+        user = User(first_name=request.POST['first_name'],
+                    last_name=request.POST['last_name'],
+                    dcu_id=request.POST['dcu_id'],
+                    modules=request.POST['modules'])
+        user.save()
+        context['msg'] = "Register Successfull"
+        return render(request, 'dashboard/login.html', context=context)
+    return render(request, 'dashboard/register.html')
+
+
 def index(request):
     context = {}
     modules_error = ""
-    if "modules" in request.GET:
+    if "dcu_id" in request.GET:
+        context['dcu_id'] = request.GET['dcu_id']
+        context['modules'] = User.objects.filter(
+            dcu_id=request.GET['dcu_id'])
+        if not context['modules']:
+            context['modules'] = ""
+        else:
+            context['modules'] = User.objects.filter(
+                dcu_id=request.GET['dcu_id'])[0].modules
+    elif "modules" in request.GET:
         context['modules'] = cleanModulesSearch(request.GET['modules'])
     if "announcements" in request.GET:
         context['announcements'] = request.GET['announcements']
