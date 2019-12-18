@@ -58,6 +58,9 @@ def index(request):
 
     if "modules" in context and len(context['modules']) > 0:
         webservice_url += "?modules=" + cleanModulesSearch(context['modules'])
+    else:
+        webservice_url += "?modules=CA377%2CCA268%2CCA357%2CCA358%2CCA349%2CCA392"
+
     modulesInfos = requests.get(webservice_url).json()
     for module in modulesInfos:
         if modulesInfos[module] != "Not Found":
