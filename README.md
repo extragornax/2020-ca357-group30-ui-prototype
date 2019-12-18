@@ -36,6 +36,14 @@ you can run
 The website is now accessible on
 > http://localhost:8000
 
+## Research
+
+To be able to have feedback on our solution, we designed a survey form.
+This surveys is here to test how our solution feels, the ergonomics and constraints. After gathing answers, and analysis of those, we can deduct answers and feedback on what we did and how to improve it efficiently.
+
+The online form is accessible [here](https://forms.gle/Rfd4MWw7WskgHmYb8).
+
+
 ## Contributors
 Gaspard WITRAND
 \<gaspard.witrand2@mail.dcu.ie\> 
