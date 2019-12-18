@@ -1,168 +1,168 @@
-CA103,Computer Systems
-CA106,Web Design
-CA112,Introduction to Computer Hardware
-CA113,Business Applications
-CA114,Managing Enterprise Computer Systems
-CA115,Digital Innovation Management & Enterprise
-CA116,Computing Programming I
-CA117,Computing Programming II
-CA119,Data Science and Databases
-CA120,Collaboration and Innovation
-CA121,Data Analysis and Visualisation
-CA146,Introduction to Programming
-CA167,Computing for Mathematics
-CA168,Digital World Exam Element
-CA1681,Digital World CA Element
-CA169,Networks & Internet
-CA170,Introduction to Operating Systems
-CA172,Problem-solving,Creativity& Critical Thinking
-CA177,Programming Fundamentals
-CA200,Quantitative Analysis for Business Decisions
-CA208,Logic
-CA214,Systems Analysis
-CA216,Operating Systems
-CA218,Introduction to Databases
-CA222,Enterprise Information Systems
-CA227A,Business Database Management I
-CA227B,Business Database Management II
-CA228,Business Systems Analysis
-CA229,Developing Internet Applications
-CA247,Advanced Programming
-CA249,Enterprise Computer Systems Configuration
-CA250,Quantitative Methods for Acc. and Fin.
-CA259,Data Analytics for Marketing Applications
-CA266,Probability & Statistics
-CA267,Software Testing
-CA268,Computer Programming 3 (Data Struct. & Alg.)
-CA269,Computer Programming 4 (Object Oriented Prog)
-CA270,Data Warehousing and OLAP
-CA271,Introduction to Machine Learning
-CA273,Data Processing and Visualisation
-CA274,Programming for Data Analysis
-CA277,Programming Fundamentals II
-CA278,Programming Fundamentals III
-CA279,Professional Practice for Enterprise Comp.
-CA282,Tools for Managing Software Develop
-CA296,Compt. Archit. & Assembly Level Programming
-CA297,Programming
-CA304,Computer Networks 2
-CA314,OO Analysis and Design
-CA318,Advanced Algorithms and A.I. Search
-CA320,Computability and Complexity
-CA326,Year 3 Project
-CA329,Intra
-CA336,Data Exploration Using Graph Theory
-CA337,Application Domains 1
-CA338,Intra
-CA339,Software Eng: Building Better Software
-CA341,Comparative Programming Languages
-CA348,Business Information Management
-CA349,IT Architecture
-CA357,User Interface and Completion
-CA358,Fundamentals of Software Testing
-CA360,Communication Skills
-CA361,IT Architecture
-CA365,SEMESTER TWO ABROAD
-CA366,INTRA
-CA368,YEAR ABROAD
-CA369,SEMESTER ONE ABROAD
-CA375,Professional & Research Practice for Data Sci
-CA377,Programming Fundamentals (Project)
-CA392,Project Management
-CA400,Project
-CA4003,Compiler Construction
-CA4004,Soft. Eng.:Process,Principles & Methods (C)
-CA4006,Concurrent and Distributed Programming
-CA4007,Computer Graphics and Image Processing
-CA4009,Search Technologies
-CA4010,Data Warehousing & Data Mining
-CA4011,Operations Research
-CA4012,Statistical Machine Translation
-CA4017,Internet of Things Management
-CA4019,4th Year Practicum Prob. Solv. & Soft Dev.
-CA4101,Enterprise Architecture (C)
-CA4102,High-Tech. Innovation & Entrepreneurship (C)
-CA4103,Service and Supply Chain Management
-CA4105,Mechanics of Search & Social Media Strategies
-CA4106,Cloud Computing
-CA468,Digital World
-CA472,Enterprise Computing Team Project
-CA550,Practicum
-CA550A,Practicum
-CA591,Object Orientated Programming
-CA598,Fundamentals of Software Development
-CA599,Networks and Internets
-CA617,Practicum (Security and Forensic Computing)
-CA623,Practicum (Software Engineering)
-CA637,Advanced Scientific Communication Skills
-CA638P,Capstone Project
-CA639,Artificial Intelligence Methods
-CA640,Professional & Research Practice
-CA640D,Professional & Research Practice
-CA640E,Professional & Research Practice
-CA640I,Professional & Research Practice
-CA640P,Professional & Research Practice
-CA642,Cryptography & Number Theory
-CA642A,Cryptography & Number Theory
-CA642I,Cryptography and Number Theory
-CA643,Forensic Computing
-CA644,System Software
-CA644A,System Software
-CA645,Network Security
-CA645A,Network Security
-CA646,P-Key Cryptography & Sec Protocols
-CA647,Secure Programming
-CA648,Formal Programming
-CA648A,Formal Programming
-CA650,Software Process Quality
-CA650A,Software Process Quality
-CA651,Introduction to Networks & Op Systems
-CA652,Artificial Intelligence, Info & Info Seeking
-CA652A,Artificial Intelligence, Info & Info Seeking
-CA652D,Artificial Intelligence, Info. & Info Seeking
-CA652P,Artificial Intelligence, Information and Info
-CA659,Mathematical Methods/Computational Science
-CA659P,Mathematical Methods/Computational Science
-CA660,Statistical Data Analysis
-CA660A,Statistical Data Analysis
-CA660P,Statistical Data Analysis
-CA662,Database Design
-CA664,Advanced Programming
-CA665,System & User Interaction Development
-CA668,eCommerce Infrastructure
-CA668A,eCommerce Infrastructure
-CA668B,eCommerce Infrastructure
-CA669,Web Design and Implementation
-CA669A,Web Design and Implementation
-CA670,Concurrent Programming
-CA670A,Concurrent Programming
-CA674,Cloud Architectures
-CA674B,Cloud Architectures
-CA675,Cloud Technologies
-CA675A,Cloud Technologies
-CA675D,Cloud Technologies
-CA675E,Cloud Technologies
-CA675P,Cloud Technologies
-CA676,Practicum (Cloud Computing)
-CA679,Practicum (Human Language Technology)
-CA682,Data Management and Visualisation
-CA682D,Data Management and Visualisation
-CA682E,Data Management and Visualisation
-CA682P,Data Management and Visualisation
-CA683,Data Analytics and Data Mining
-CA683A,Data Analytics and Data Mining
-CA683I,Data Analytics and Data Mining
-CA683P,Data Analytics and Data Mining
-CA684,Machine Learning
-CA684I,Machine Learning
-CA684P,Machine Learning
-CA685,Data Analytics Practicum
-CA686,Foundations of Artificial Intelligence
-CA687,Cloud Systems
-CA688,Blockchain: Basics and Applications
-CA690,Practicum
-CA691,Data Governance
-CA691E,Data Governance
-GS606,Enterprise Exp for Grad. Research Students
-GS606A,Enterprise Exp for Grad. Research Students
-LC575,Managing & Working in an Intercultural Env
+CA103,Computer Systems,,
+CA106,Web Design,,
+CA112,Introduction to Computer Hardware,
+CA113,Business Applications,
+CA114,Managing Enterprise Computer Systems,
+CA115,Digital Innovation Management & Enterprise,
+CA116,Computing Programming I,
+CA117,Computing Programming II,
+CA119,Data Science and Databases,
+CA120,Collaboration and Innovation,
+CA121,Data Analysis and Visualisation,
+CA146,Introduction to Programming,
+CA167,Computing for Mathematics,Homeworks due tomorrow (one extra day)
+CA168,Digital World Exam Element,
+CA1681,Digital World CA Element,
+CA169,Networks & Internet,
+CA170,Introduction to Operating Systems,
+CA172,Problem-solving,Creativity& Critical Thinking,
+CA177,Programming Fundamentals,
+CA200,Quantitative Analysis for Business Decisions,
+CA208,Logic,
+CA214,Systems Analysis,
+CA216,Operating Systems,
+CA218,Introduction to Databases,
+CA222,Enterprise Information Systems,
+CA227A,Business Database Management I,
+CA227B,Business Database Management II,
+CA228,Business Systems Analysis,
+CA229,Developing Internet Applications,
+CA247,Advanced Programming,
+CA249,Enterprise Computer Systems Configuration,
+CA250,Quantitative Methods for Acc. and Fin.,
+CA259,Data Analytics for Marketing Applications,
+CA266,Probability & Statistics,
+CA267,Software Testing,
+CA268,Computer Programming 3 (Data Struct. & Alg.),All labs are due next friday
+CA269,Computer Programming 4 (Object Oriented Prog),
+CA270,Data Warehousing and OLAP,
+CA271,Introduction to Machine Learning,
+CA273,Data Processing and Visualisation,
+CA274,Programming for Data Analysis,
+CA277,Programming Fundamentals II,
+CA278,Programming Fundamentals III,
+CA279,Professional Practice for Enterprise Comp.,
+CA282,Tools for Managing Software Develop,
+CA296,Compt. Archit. & Assembly Level Programming,
+CA297,Programming,
+CA304,Computer Networks 2,
+CA314,OO Analysis and Design,
+CA318,Advanced Algorithms and A.I. Search,
+CA320,Computability and Complexity,
+CA326,Year 3 Project,
+CA329,Intra,
+CA336,Data Exploration Using Graph Theory,
+CA337,Application Domains 1,
+CA338,Intra,
+CA339,Software Eng: Building Better Software,
+CA341,Comparative Programming Languages,
+CA348,Business Information Management,
+CA349,IT Architecture,Exam revision session today
+CA357,User Interface and Completion,
+CA358,Fundamentals of Software Testing,
+CA360,Communication Skills,
+CA361,IT Architecture,
+CA365,SEMESTER TWO ABROAD,
+CA366,INTRA,
+CA368,YEAR ABROAD,Merry christmas to every international students!
+CA369,SEMESTER ONE ABROAD,
+CA375,Professional & Research Practice for Data Sci,
+CA377,Programming Fundamentals (Project),Today's lecture is cancelled, will be reschedule soon
+CA392,Project Management,Presentation will be next wednesday morning (location TBA)
+CA400,Project,
+CA4003,Compiler Construction,
+CA4004,Soft. Eng.:Process,Principles & Methods (C),
+CA4006,Concurrent and Distributed Programming,
+CA4007,Computer Graphics and Image Processing,
+CA4009,Search Technologies,
+CA4010,Data Warehousing & Data Mining,
+CA4011,Operations Research,
+CA4012,Statistical Machine Translation,
+CA4017,Internet of Things Management,
+CA4019,4th Year Practicum Prob. Solv. & Soft Dev.,
+CA4101,Enterprise Architecture (C),
+CA4102,High-Tech. Innovation & Entrepreneurship (C),
+CA4103,Service and Supply Chain Management,
+CA4105,Mechanics of Search & Social Media Strategies,
+CA4106,Cloud Computing,
+CA468,Digital World,
+CA472,Enterprise Computing Team Project,
+CA550,Practicum,
+CA550A,Practicum,
+CA591,Object Orientated Programming,
+CA598,Fundamentals of Software Development,
+CA599,Networks and Internets,
+CA617,Practicum (Security and Forensic Computing),
+CA623,Practicum (Software Engineering),
+CA637,Advanced Scientific Communication Skills,
+CA638P,Capstone Project,
+CA639,Artificial Intelligence Methods,
+CA640,Professional & Research Practice,
+CA640D,Professional & Research Practice,
+CA640E,Professional & Research Practice,
+CA640I,Professional & Research Practice,
+CA640P,Professional & Research Practice,
+CA642,Cryptography & Number Theory,
+CA642A,Cryptography & Number Theory,
+CA642I,Cryptography and Number Theory,
+CA643,Forensic Computing,
+CA644,System Software,
+CA644A,System Software,
+CA645,Network Security,
+CA645A,Network Security,
+CA646,P-Key Cryptography & Sec Protocols,
+CA647,Secure Programming,
+CA648,Formal Programming,
+CA648A,Formal Programming,
+CA650,Software Process Quality,
+CA650A,Software Process Quality,
+CA651,Introduction to Networks & Op Systems,
+CA652,Artificial Intelligence, Info & Info Seeking,
+CA652A,Artificial Intelligence, Info & Info Seeking,
+CA652D,Artificial Intelligence, Info. & Info Seeking,
+CA652P,Artificial Intelligence, Information and Info,
+CA659,Mathematical Methods/Computational Science,
+CA659P,Mathematical Methods/Computational Science,
+CA660,Statistical Data Analysis,
+CA660A,Statistical Data Analysis,
+CA660P,Statistical Data Analysis,
+CA662,Database Design,
+CA664,Advanced Programming,
+CA665,System & User Interaction Development,
+CA668,eCommerce Infrastructure,
+CA668A,eCommerce Infrastructure,
+CA668B,eCommerce Infrastructure,
+CA669,Web Design and Implementation,
+CA669A,Web Design and Implementation,
+CA670,Concurrent Programming,
+CA670A,Concurrent Programming,
+CA674,Cloud Architectures,
+CA674B,Cloud Architectures,
+CA675,Cloud Technologies,
+CA675A,Cloud Technologies,
+CA675D,Cloud Technologies,
+CA675E,Cloud Technologies,
+CA675P,Cloud Technologies,
+CA676,Practicum (Cloud Computing),
+CA679,Practicum (Human Language Technology),
+CA682,Data Management and Visualisation,
+CA682D,Data Management and Visualisation,
+CA682E,Data Management and Visualisation,
+CA682P,Data Management and Visualisation,
+CA683,Data Analytics and Data Mining,
+CA683A,Data Analytics and Data Mining,
+CA683I,Data Analytics and Data Mining,
+CA683P,Data Analytics and Data Mining,
+CA684,Machine Learning,
+CA684I,Machine Learning,
+CA684P,Machine Learning,
+CA685,Data Analytics Practicum,
+CA686,Foundations of Artificial Intelligence,
+CA687,Cloud Systems,
+CA688,Blockchain: Basics and Applications,
+CA690,Practicum,
+CA691,Data Governance,
+CA691E,Data Governance,
+GS606,Enterprise Exp for Grad. Research Students,
+GS606A,Enterprise Exp for Grad. Research Students,
+LC575,Managing & Working in an Intercultural Env,

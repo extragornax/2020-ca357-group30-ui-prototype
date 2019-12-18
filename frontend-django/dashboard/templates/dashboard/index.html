@@ -323,26 +323,21 @@
 
                     <div class="col-lg-6 mb-4">
                         <div class="card shadow mb-4">
-                            <!-- <div class="card-header py-3">
-								<h6 class="m-0 font-weight-bold text-primary">Announcements</h6>
-							</div> -->
                             <div class="card-body">Today you have {{lectureCount.count}} lectures today
                                 {% if lectureCount.count > 0 %}and you will start at
                                 {{lectureCount.first.hour}}:{{lectureCount.first.min}}.{% endif %}</div>
                         </div>
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Announcements for today's lectures</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Announcements</h6>
                             </div>
                             <div class="card-body">
-                                <h5>CA377 - 19/12/2019 | 12pm </h5>
-                                <span>Today's lecture is cancelled i'll comeback to you ASAP</span>
-                                <p>Emmanuel Carli</p>
+                                {% for ann in announcements %}
+                                <h5>{{ann.module}} </h5>
+                                <span>{{ann.info}}</span>
+                                <!-- <p>Emmanuel Carli</p>-->
                                 <hr>
-                                <h5>CA377 - 19/12/2019 | 12pm </h5>
-                                <span>Today's lecture is cancelled i'll comeback to you ASAP</span>
-                                <p>Emmanuel Carli</p>
-                                <hr>
+                                {% endfor %}
                             </div>
                         </div>
 
