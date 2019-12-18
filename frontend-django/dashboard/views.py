@@ -1,7 +1,4 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
 import requests
 from dashboard.models import User
 from django.views.decorators.csrf import csrf_exempt
@@ -37,6 +34,9 @@ def register(request):
 
 def index(request):
     context = {}
+    webservice_url = 'http://vps.cheap.appboxes.co:10126/'
+    webservice_url = 'http://0.0.0.0:10126/'
+    announcements = []
     modules_error = ""
     if "dcu_id" in request.GET:
         context['dcu_id'] = request.GET['dcu_id']
@@ -51,7 +51,6 @@ def index(request):
         context['modules'] = cleanModulesSearch(request.GET['modules'])
     if "announcements" in request.GET:
         context['announcements'] = request.GET['announcements']
-    webservice_url = 'http://vps.cheap.appboxes.co:10126/'
 
     modulesPerDay = [{"day": "Monday", "data": []}, {"day": "Tuesday", "data": []}, {"day": "Wednesday", "data": []},
                      {"day": "Thursday", "data": []}, {"day": "Friday", "data": []}, {"day": "Saturday", "data": []}, {"day": "Sunday", "data": []}]
@@ -65,6 +64,9 @@ def index(request):
     for module in modulesInfos:
         if modulesInfos[module] != "Not Found":
             moduleName = module + " - " + modulesInfos[module]['name']
+            if modulesInfos[module]['announcement'] != "None":
+                announcements.append(
+                    {'module': moduleName, "info": modulesInfos[module]['announcement']})
             for i in modulesInfos[module]['events']:
                 timeSplitStart = modulesInfos[module]['events'][i]['begins'].split(
                     ':')
@@ -110,6 +112,7 @@ def index(request):
 
     context['modulesPerDay'] = modulesPerDay
     context['lectureCount'] = {"count": lectCounter, "first": earliestTime}
+    context['announcements'] = announcements
 
     context['modules_error'] = modules_error
     return render(request, 'dashboard/index.html', context)
