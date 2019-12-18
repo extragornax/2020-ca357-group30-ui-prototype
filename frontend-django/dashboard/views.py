@@ -35,7 +35,6 @@ def register(request):
 def index(request):
     context = {}
     webservice_url = 'http://vps.cheap.appboxes.co:10126/'
-    webservice_url = 'http://0.0.0.0:10126/'
     announcements = []
     modules_error = ""
     if "dcu_id" in request.GET:
