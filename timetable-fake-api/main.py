@@ -72,6 +72,10 @@ def create_modules():
         for row in reader:
             modules[row[0]] = {}
             modules[row[0]]['name'] = row[1]
+            if len(row) > 2 and len(row[2]) > 1:
+                modules[row[0]]['announcement'] = row[2]
+            else:
+                modules[row[0]]['announcement'] = "None"
             events = create_modules_events()
             modules[row[0]]['events'] = {}
             z = 0
