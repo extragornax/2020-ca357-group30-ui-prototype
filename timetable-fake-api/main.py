@@ -1,16 +1,15 @@
 from dataclasses import dataclass
 import datetime
-from datetime import time
+from datetime import time, timedelta
 from random import randrange
 import csv
-import os
 import flask
 import requests
 from flask import jsonify
 from flask import request as flask_request
 
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+#app.config["DEBUG"] = True
 
 
 @dataclass
@@ -68,7 +67,7 @@ def getByName():
 def create_modules():
     global modules
     modules = {}
-    with open(os.path.dirname(os.path.realpath(__file__)) + '/data') as fd:
+    with open('data') as fd:
         reader = csv.reader(fd)
         for row in reader:
             modules[row[0]] = {}
@@ -77,12 +76,15 @@ def create_modules():
             modules[row[0]]['events'] = {}
             z = 0
             for i in events:
-                modules[row[0]]['events'][i.day] = {}
-                modules[row[0]]['events'][i.day]['begins'] = i.begins.strftime(
+                modules[row[0]]['events'][i.day_nb] = {}
+                modules[row[0]]['events'][i.day_nb]['begins'] = i.begins.strftime(
                     "%H:%M")
-                modules[row[0]]['events'][i.day]['duration'] = i.duration
+                tmp = time(i.begins.hour + i.duration)
+                modules[row[0]]['events'][i.day_nb]['ends'] = tmp.strftime(
+                    "%H:%M")
+                modules[row[0]]['events'][i.day_nb]['duration'] = i.duration
                 z += 1
 
 
 create_modules()
-app.run()
+app.run(host='0.0.0.0', port=10126)
